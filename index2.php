@@ -40,19 +40,20 @@ class Movie {
 }
 // fine classe 
 
+
+
 $movie1 = new Movie('Matrix', 'Action', 35);
 $movie2 = new Movie('Pokemon', 'Animation', 12);
 $avgVote = $movie1-> setVote(5);
 $avgVote = $movie1-> setVote(5);
 $avgVote = $movie1-> setVote(2);
 
-$avgVote2 = $movie2-> setVote(2);
+for($i = 1; $i <= 10; $i++) {
+    $avgVote2 = $movie2-> setVote(rand(1,10));
+}
 $avgVote2 = $movie2-> getVote();
 
-
-
 echo 'Media voto Movie ' . $avgVote2;
-
 
 var_dump($movie1);
 var_dump($movie2);
