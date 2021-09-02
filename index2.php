@@ -10,10 +10,10 @@ class Movie {
     public $genre;
     public $price;
     public $linkImage;
-    public $vote;
+    private $vote;
     public $description;
-    public $counter = 0;
-    public $sumVote;
+    private $counter = 0;
+    private $sumVote;
 
     // costruttore 
     function __construct($_title, $_genre, $_price){
@@ -49,13 +49,15 @@ $avgVote = $movie1-> setVote(5);
 $avgVote = $movie1-> setVote(2);
 
 for($i = 1; $i <= 10; $i++) {
-    $avgVote2 = $movie2-> setVote(rand(1,10));
+    $avgVote2 = $movie2-> setVote(rand(3,10));
 }
 $avgVote2 = $movie2-> getVote();
 
-echo 'Media voto Movie ' . $avgVote2;
-
 var_dump($movie1);
 var_dump($movie2);
+
+echo 'Media voto Movie ' . $avgVote2;
+
+
 
 ?>
